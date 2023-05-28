@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+$bgcolor: rgb(201, 250, 255);
+$color: coral;
+$font: Muli, sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background: $bgcolor;
+    font-family: $font;
+    overflow: hidden;
+}
+
+.slider {
+    height: 90vh;
+    position: relative;
+    margin: 1rem;
+    flex: 1;
+    border-radius: 1rem;
+    border: 2px solid #ffff;
+    cursor: pointer;
+    transition: all 700ms ease-in-out;
+    .slider__title {
+        position: absolute;
+        height: 2rem;
+        bottom: 20px;
+        left: 20px;
+        opacity: 0;
+        font-size: 1.5rem;
+        color: $color;
+        border: none;
+    }
+}
+
+.slider.active {
+    flex: 10;
+    .slider__title {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+    }
+ }
+
+.slider__one {
+    @extend .slider;
+    background: url(./images/one.jpg) center center/cover no-repeat;
+}
+
+.slider__two {
+    @extend .slider;
+    background: url(./images/two.jpg) center center/cover no-repeat;
+}
+
+.slider__three {
+    @extend .slider;
+    background: url(./images/three.jpg) center center/cover no-repeat;
+}
+
+.slider__four {
+    @extend .slider;
+    background: url(./images/four.jpg) center center/cover no-repeat;
+}
+
+.slider__five {
+
+    @extend .slider;
+    background: url(./images/five.jpg) center center/cover no-repeat;
+}
+
+.arrows {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
