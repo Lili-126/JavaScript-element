@@ -166,7 +166,7 @@ body {
         border-radius: 1.5rem;
         border: 2px solid $color;
         cursor: pointer;
-        transition-duration: 0.4s;
+        transition-duration: 0.4s; /* для ховер эффекта */
     }
 
     .next {

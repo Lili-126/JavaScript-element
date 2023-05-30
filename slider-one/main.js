@@ -109,20 +109,20 @@ if (width <='767') {
     pervNext.append(next);
 };
 
-items = document.querySelectorAll('.slide');
-/* console.log(items); */
+items = Array.from(document.querySelectorAll('.slide'));   /* сделан массив картинок */
+/*  console.log(items); */
 
 function calcSizes() {
     console.log('resize');
-    wrappers.style.width = width * items.length /* + 80 */ + 'px'; /* ширина контейнера слайдера */
+    wrappers.style.width = width * items.length + 'px';   /* ширина контейнера слайдера */
     items.forEach( item => {
-        item.style.width = width /* - 50 */ + 'px'; /* ширина картинки слайдера */
-        /* item.style.height = 'auto'; */
+        item.style.width = width + 'px';   /* ширина картинки слайдера */
+       /* item.style.height = 'auto'; */
     });
-    pervNext.style.width = width /* - 50  */+ 'px'; /* ширина контейнера для кнопок */
+    pervNext.style.width = width + 'px';   /* ширина контейнера для кнопок */
 }
 
-window.addEventListener('resize', calcSizes); /* автоматический пересчет размеров */
+document.body.addEventListener('resize', calcSizes);   /* автоматический пересчет размеров */
 calcSizes();
 
 document.querySelector('.next').addEventListener('click', () => {
