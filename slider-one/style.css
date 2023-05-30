@@ -140,9 +140,17 @@ body {
     background: none;
     border-radius: 1.5rem;
     border: 2px solid #ffffff;
+    cursor: pointer;
+    transition-duration: 0.4s;
   }
   .next {
     left: 84%;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(248, 254, 80, 0.5);
+    border: 2px solid rgba(248, 254, 80, 0.5);
+    color: rgba(248, 254, 80, 0.5);
   }
 }
 
