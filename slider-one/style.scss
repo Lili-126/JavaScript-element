@@ -3,6 +3,7 @@
 $bgcolor: rgb(201, 250, 255);
 $color: #ffffff;
 $font: Muli, sans-serif;
+$hoverColor: rgb(248, 254, 80, 0.5);
 
 * {
     box-sizing: border-box;
@@ -164,12 +165,20 @@ body {
         background: none;
         border-radius: 1.5rem;
         border: 2px solid $color;
+        cursor: pointer;
+        transition-duration: 0.4s;
     }
 
     .next {
         left: 84%;
     }
 
+    .prev:hover,
+    .next:hover {
+        background-color: $hoverColor;
+        border: 2px solid $hoverColor;
+        color: $hoverColor;
+    }
 }
 
 
