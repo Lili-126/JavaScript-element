@@ -1,7 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -71,87 +75,130 @@ body {
   background: url(./images/five.jpg) center center/cover no-repeat;
 }
 
-.arrows {
-  visibility: hidden;
+.arrows,
+.arrows__prev,
+.arrows__next {
+  display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .wrapper,
-  .slider,
-  .slider__one,
-  .slider__two,
-  .slider__three,
-  .slider__four,
-  .slider__five {
-    display: none;
-  }
-  .wrappers {
-    display: flex;
-    height: 100%;
+  .wrapper {
+    width: 500vw;
+    padding: 0;
     transition: all 700ms ease-in-out;
   }
-  .slide, .slide__five, .slide__four, .slide__three, .slide__two, .slide__one {
-    position: relative;
-    margin: auto 0;
-    /*  margin-right: 0; */
-    height: 35%;
-    border-radius: 0.7rem;
-    border: 2px solid #ffffff;
-    cursor: pointer;
+  .slider, .slider__one, .slider__two, .slider__three, .slider__four, .slider__five {
+    margin: 0rem;
+    flex: auto;
   }
-  .slide .title, .slide__five .title, .slide__four .title, .slide__three .title, .slide__two .title, .slide__one .title {
-    position: absolute;
-    height: 2rem;
-    bottom: 20px;
-    left: 20px;
-    font-size: 1.15rem;
-    color: #ffffff;
-    border: none;
+  .slider .slider__title, .slider__one .slider__title, .slider__two .slider__title, .slider__three .slider__title, .slider__four .slider__title, .slider__five .slider__title {
+    height: 1.15rem;
+    opacity: 1;
+    font-size: 1rem;
   }
-  .slide__one {
+  .slider.active, .active.slider__one, .active.slider__two, .active.slider__three, .active.slider__four, .active.slider__five {
+    flex: auto;
+  }
+  .slider__one {
     background: url(./images/one1.jpg) center center/cover no-repeat;
   }
-  .slide__two {
+  .slider__two {
     background: url(./images/two1.jpg) center center/cover no-repeat;
   }
-  .slide__three {
+  .slider__three {
     background: url(./images/three1.jpg) center center/cover no-repeat;
   }
-  .slide__four {
+  .slider__four {
     background: url(./images/four1.jpg) center center/cover no-repeat;
   }
-  .slide__five {
+  .slider__five {
     background: url(./images/five1.jpg) center center/cover no-repeat;
   }
-  .perv-next {
+  .arrows,
+  .arrows__prev,
+  .arrows__next {
+    display: block;
+  }
+  .arrows {
     position: absolute;
     z-index: 2;
     top: 46%;
     display: flex;
     justify-content: space-between;
-    /* margin-left: 1.5rem; */
   }
-  .prev,
-  .next {
+  .arrows__prev,
+  .arrows__next {
+    z-index: 2;
     width: 60px;
-    height: 50px;
-    font-size: 1rem;
+    height: 80px;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
     color: #ffffff;
-    background: none;
-    border-radius: 1.5rem;
-    border: 2px solid #ffffff;
+    text-decoration: none;
+    border: none;
     cursor: pointer;
-    transition-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 500ms; /* для ховер эффекта */
   }
-  .next {
+  .arrows__next {
     left: 84%;
   }
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(248, 254, 80, 0.5);
-    border: 2px solid rgba(248, 254, 80, 0.5);
-    color: rgba(248, 254, 80, 0.5);
+  .arrows__prev:hover,
+  .arrows__next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(24, 24, 24, 0.7);
   }
 }
+/* 
+    .wrappers {
+        display: flex;
+        height: 100%;
+        transition: all 700ms ease-in-out;
+    }
+
+    .slide {
+        position: relative;
+        margin: auto 0;
+        height: 35%;
+        border-radius: 0.7rem;
+        border: 2px solid $color;
+        cursor: pointer;
+        .title {
+            position: absolute;
+            height: 2rem;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1.15rem;
+            color: $color;
+            border: none;
+        }
+    }
+
+
+    .slide__one {
+        @extend .slide;
+        background: url(./images/one1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__two {
+        @extend .slide;
+        background: url(./images/two1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__three {
+        @extend .slide;
+        background: url(./images/three1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__four {
+        @extend .slide;
+        background: url(./images/four1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__five {
+        @extend .slide;
+        background: url(./images/five1.jpg) center center/cover no-repeat;
+    }  */
 
 /*# sourceMappingURL=style.css.map */
