@@ -26,7 +26,7 @@ body {
     height: 100vh;
 }
 
-.wrapper {
+.colors {
     width: 35%;
     height: $width;
     position: absolute;
@@ -72,6 +72,27 @@ body {
 .grei {
     background-image: $bggrei;
 }
+
+.images {
+    height: $height;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides__image {
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+
 
 
 

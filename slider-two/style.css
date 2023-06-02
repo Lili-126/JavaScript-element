@@ -16,7 +16,7 @@ body {
   height: 100vh;
 }
 
-.wrapper {
+.colors {
   width: 35%;
   height: 100%;
   position: absolute;
@@ -61,6 +61,23 @@ body {
 
 .grei {
   background-image: linear-gradient(229.99deg, #d7d9da -26%, #628e93 145%);
+}
+
+.images {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides__image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 /*# sourceMappingURL=style.css.map */
