@@ -15,17 +15,33 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.container .buttons .up-button,
+.container .buttons .down-button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+.container .buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.container .buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 
 .colors {
   width: 35%;
   height: 100%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -400vh;
   transition: transform 0.5s ease-in-out;
 }
-
-.slides__colors {
+.colors div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,11 +50,11 @@ body {
   justify-content: center;
   color: #ffffff;
 }
-.slides__colors .heading {
+.colors div .heading {
   font-size: 2.5rem;
   margin: 0 10%;
 }
-.slides__colors .text {
+.colors div .text {
   font-size: 1.5rem;
   text-align: center;
 }
@@ -71,13 +87,32 @@ body {
   width: 65%;
   transition: transform 0.5s ease-in-out;
 }
-
-.slides__image {
+.images div {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.up-button,
+.down-button {
+  background-color: #ffffff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+.up-button:hover,
+.down-button:hover {
+  color: #222;
+}
+
+.up-button:focus,
+.down-button:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */
