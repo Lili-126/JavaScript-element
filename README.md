@@ -2,3 +2,6 @@
 
 Project: slider-one
 https://lili-126.github.io/JavaScript-project/slider-one/index.html
+
+
+https://lili-126.github.io/JavaScript-project/slider-two/index.html
