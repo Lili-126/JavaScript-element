@@ -107,6 +107,14 @@ body {
     }
 }
 
+.slides__image_big {
+    width: $width;
+}
+
+.slides__image_small {
+    display: none;
+}
+
 .up-button,
 .down-button {
     background-color: $clwhite;
@@ -126,6 +134,31 @@ body {
 .down-button:focus {
     outline: none;
   }
+
+ @media screen and (max-width: 912px) {
+
+    .colors {
+        .slides__colors {
+            justify-content: flex-start;
+            padding-top: 200%;
+            .heading {
+                display: none;
+            }
+            .text {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .slides__image_big {
+        display: none;
+    }
+    .slides__image_small {
+        display: block;
+        width: $width;
+        height: $height;
+    }
+ }
 
 
 
