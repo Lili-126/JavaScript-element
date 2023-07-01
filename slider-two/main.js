@@ -1,7 +1,7 @@
 const container = document.querySelector('.container');
 const boxColors = document.querySelector('.colors');
 const boxImages = document.querySelector('.images');
-const image = boxImages.querySelectorAll('div');
+const image = boxImages.querySelectorAll('.slides__image');
 const upButton = document.querySelector('.up-button');
 const downButton = document.querySelector('.down-button');
 
