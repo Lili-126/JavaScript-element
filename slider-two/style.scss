@@ -52,7 +52,7 @@ body {
     left: 0;
     top: -400vh;
     transition: transform 0.5s ease-in-out;
-    div {
+    .slides__colors {
         width: $width;
         height: $height;
         display: flex;
@@ -98,13 +98,21 @@ body {
     left: 35%;
     width: 65%;
     transition: transform 0.5s ease-in-out;
-    div {
+    .slides__image {
         width: $width;
         height: $height;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
     }
+}
+
+.slides__image_big {
+    width: $width;
+}
+
+.slides__image_small {
+    display: none;
 }
 
 .up-button,
@@ -126,6 +134,31 @@ body {
 .down-button:focus {
     outline: none;
   }
+
+ @media screen and (max-width: 912px) {
+
+    .colors {
+        .slides__colors {
+            justify-content: flex-start;
+            padding-top: 200%;
+            .heading {
+                display: none;
+            }
+            .text {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .slides__image_big {
+        display: none;
+    }
+    .slides__image_small {
+        display: block;
+        width: $width;
+        height: $height;
+    }
+ }
 
 
 
