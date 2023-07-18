@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+$bgcolor: rgb(201, 250, 255);
+$color: #ffffff;
+$font: Muli, sans-serif;
+$width: 100vw;
+
+*,
+*:before,
+*:after {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    width: $width;
+    height: 100vh;
+    background: $bgcolor;
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-family: $font;
+}
+
+.slider {
+    height: 90vh;
+    position: relative;
+    margin: 1rem;
+    flex: 1;
+    border-radius: 1rem;
+    border: 2px solid $color;
+    cursor: pointer;
+    transition: all 700ms ease-in-out;
+    .slider__title {
+        position: absolute;
+        height: 2rem;
+        bottom: 20px;
+        left: 20px;
+        opacity: 0;
+        font-size: 1.5rem;
+        color: $color;
+        border: none;
+    }
+}
+
+.slider.active {
+    flex: 10;
+    .slider__title {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+    }
+ }
+
+.slider__one {
+    @extend .slider;
+    background: url(./images/one.jpg) center center/cover no-repeat;
+}
+
+.slider__two {
+    @extend .slider;
+    background: url(./images/two.jpg) center center/cover no-repeat;
+}
+
+.slider__three {
+    @extend .slider;
+    background: url(./images/three.jpg) center center/cover no-repeat;
+}
+
+.slider__four {
+    @extend .slider;
+    background: url(./images/four.jpg) center center/cover no-repeat;
+}
+
+.slider__five {
+    @extend .slider;
+    background: url(./images/five.jpg) center center/cover no-repeat;
+}
+
+.arrows,
+.arrows__prev,
+.arrows__next {
+    display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .wrapper {
+        width: $width * 5;
+        padding: 0;
+        transition: all 700ms ease-in-out;
+    }
+
+    .slider {
+        margin: 0rem;
+        flex: auto;
+        .slider__title {
+            height: 1.15rem;
+            opacity: 1;
+            font-size: 1rem;
+        }
+    }
+
+    .slider.active {
+        flex: auto;
+    }
+
+    .slider__one {
+        @extend .slider;
+        background: url(./images/one1.jpg) center center/cover no-repeat;
+    }
+
+    .slider__two {
+        @extend .slider;
+        background: url(./images/two1.jpg) center center/cover no-repeat;
+    }
+
+    .slider__three {
+        @extend .slider;
+        background: url(./images/three1.jpg) center center/cover no-repeat;
+    }
+
+    .slider__four {
+        @extend .slider;
+        background: url(./images/four1.jpg) center center/cover no-repeat;
+    }
+
+    .slider__five {
+        @extend .slider;
+        background: url(./images/five1.jpg) center center/cover no-repeat;
+    }
+
+    .arrows,
+    .arrows__prev,
+    .arrows__next {
+        display: block;
+}
+
+    .arrows {
+        position: absolute;
+        z-index: 2;
+        top: 46%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .arrows__prev,
+    .arrows__next {
+        z-index: 2;
+        width: 60px;
+        height: 80px;
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color:$color;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0);
+        transition-duration: 500ms; /* для ховер эффекта */
+    }
+
+    .arrows__next {
+        left: 84%;
+    }
+
+    .arrows__prev:hover,
+    .arrows__next:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgb(24, 24, 24, 0.7);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    .wrappers {
+        display: flex;
+        height: 100%;
+        transition: all 700ms ease-in-out;
+    }
+
+    .slide {
+        position: relative;
+        margin: auto 0;
+        height: 35%;
+        border-radius: 0.7rem;
+        border: 2px solid $color;
+        cursor: pointer;
+        .title {
+            position: absolute;
+            height: 2rem;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1.15rem;
+            color: $color;
+            border: none;
+        }
+    }
+
+
+    .slide__one {
+        @extend .slide;
+        background: url(./images/one1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__two {
+        @extend .slide;
+        background: url(./images/two1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__three {
+        @extend .slide;
+        background: url(./images/three1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__four {
+        @extend .slide;
+        background: url(./images/four1.jpg) center center/cover no-repeat;
+    }
+
+    .slide__five {
+        @extend .slide;
+        background: url(./images/five1.jpg) center center/cover no-repeat;
+    }  */
+
+   
+
+
+
+
+
+
+
+
