@@ -3,7 +3,12 @@
   margin: 0;
 }
 
-.text, .block .btn__accordion {
+ul,
+li {
+  list-style: none;
+}
+
+.list-image__text, .list-item .list-item__button {
   font-family: Kalam;
   font-size: 2rem;
   text-align: left;
@@ -30,30 +35,135 @@ body {
   margin-top: 50px;
 }
 
-.block {
-  position: relative;
+.list-item {
+  margin-top: 20px;
+  cursor: pointer;
 }
-.block .btn__accordion {
+.list-item .list-item__button {
+  display: block;
   width: 100%;
   height: 70px;
-  margin: 0 auto;
+  padding-top: 10px;
+  text-decoration: none;
   border-left: none;
   border-right: none;
   border-top: 3px solid #ecedee;
   border-bottom: 3px solid #ecedee;
   background: #fffeef;
+  color: #000;
+  cursor: pointer;
 }
-.block .image__accordion {
+
+.list-image {
+  position: relative;
+  /*  @extend%img-hidden; */
+}
+
+.list-image__image {
   display: block;
   width: 32%;
   margin: 15px auto;
   border-radius: 15px;
 }
 
-.text {
+.list-image__text {
   color: #fffeef;
   text-shadow: 0px -3px 1px #000, 0px -3px 1px #000, 0px 3px 1px #000;
   position: absolute;
-  top: 21%;
+  top: 6%;
   left: 39%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+%text {
+    font-family: Kalam;
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+%img-hidden {
+    height: 0;
+    overflow: hidden;
+}
+
+%block-hover {
+    border-bottom: none;
+    color: rgb(48, 48, 250);
+    &::after {
+        content: "+";
+        display: block;
+        margin: 2% 5% 0 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 0.5rem;
+        color: rgb(48, 48, 250);
+        float:right;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+body {
+    width: 100vw;
+    background-color: #fffeef;
+    font-family: Kalam;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fffeef;
+}
+
+.wrapper {
+    height: 100vh;
+    margin: 0 200px;
+}
+
+.title {
+    font-size: 3rem;
+    color: #000;
+    margin-top: 50px;
+}
+
+
+.block {
+    position: relative;
+    cursor: pointer;
+    .btn__accordion {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        border-left: none;
+        border-right: none;
+        border-top: 3px solid #ecedee;
+        border-bottom: 3px solid #ecedee;
+        background: #fffeef;
+        @extend%text;
+        cursor: pointer;
+    }
+}
+
+
+.block-image__image {
+    display: block;
+    width: 32%;
+   //@extend%img-hidden;
+    margin: 15px auto;
+    border-radius: 15px;
+}
+
+
+.block-image__text {
+    @extend%text;
+   //@extend%img-hidden;
+    color: #fffeef;
+    text-shadow:
+    -0px -3px 1px #000,
+    0px -3px 1px #000,
+    -0px 3px 1px #000;
+    position: absolute;
+    top: 21%;
+    left: 39%;
+} *//*# sourceMappingURL=style.css.map */
