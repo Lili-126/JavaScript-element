@@ -15,18 +15,12 @@ li {
     font-weight: 700;
 }
 
-%img-hidden {
-    height: 0;
-    overflow: hidden;
-}
-
 %block-hover {
-    border-bottom: none;
     color: rgb(48, 48, 250);
     &::after {
         content: "+";
         display: block;
-        margin: 2% 5% 0 0;
+        margin: 1.5% 5% 0 0;
         font-size: 2.5rem;
         font-weight: 700;
         line-height: 0.5rem;
@@ -61,11 +55,9 @@ body {
     margin-top: 20px;
     cursor: pointer;
     .list-item__button {
-        display: block;
         width: 100%;
         height: 70px;
         padding-top: 10px;
-        text-decoration: none;
         border-left: none;
         border-right: none;
         border-top: 3px solid #ecedee;
@@ -77,9 +69,30 @@ body {
     }
 }
 
+    .list:hover {                // при наведении на любую область списка
+        .list-item__button {
+            @extend%block-hover;
+        }
+    }
+
+    .list-item__button:hover {   // при наведении только на ссылку-кнопку
+        border-bottom: none;
+        @extend%block-hover;
+        &:active {
+            transform:rotate(-225deg);
+        }
+    }
+
 .list-image {
     position: relative;
-    /*  @extend%img-hidden; */
+   /*   height: 0;
+    overflow: hidden; */
+}
+
+.list-image .active {
+    max-height: 100%;
+    transition:max-height 1s;
+    overflow: visible;
 }
 
 

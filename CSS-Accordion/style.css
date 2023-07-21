@@ -15,6 +15,21 @@ li {
   font-weight: 700;
 }
 
+.list-item__button:hover, .list:hover .list-item__button {
+  color: rgb(48, 48, 250);
+}
+.list-item__button:hover::after, .list:hover .list-item__button::after {
+  content: "+";
+  display: block;
+  margin: 1.5% 5% 0 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.5rem;
+  color: rgb(48, 48, 250);
+  float: right;
+  transition: transform 0.3s ease-in-out;
+}
+
 body {
   width: 100vw;
   background-color: #fffeef;
@@ -40,11 +55,9 @@ body {
   cursor: pointer;
 }
 .list-item .list-item__button {
-  display: block;
   width: 100%;
   height: 70px;
   padding-top: 10px;
-  text-decoration: none;
   border-left: none;
   border-right: none;
   border-top: 3px solid #ecedee;
@@ -54,9 +67,23 @@ body {
   cursor: pointer;
 }
 
+.list-item__button:hover {
+  border-bottom: none;
+}
+.list-item__button:hover:active {
+  transform: rotate(-225deg);
+}
+
 .list-image {
   position: relative;
-  /*  @extend%img-hidden; */
+  /*   height: 0;
+   overflow: hidden; */
+}
+
+.list-image .active {
+  max-height: 100%;
+  transition: max-height 1s;
+  overflow: visible;
 }
 
 .list-image__image {
