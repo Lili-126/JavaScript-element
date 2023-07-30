@@ -20,13 +20,16 @@ li {
     &::after {
         content: "+";
         display: block;
+        /* position: absolute;
+        z-index: 1; */
         margin: 1.5% 5% 0 0;
         font-size: 2.5rem;
         font-weight: 700;
         line-height: 0.5rem;
         color: rgb(48, 48, 250);
         float:right;
-        transition: transform 0.3s ease-in-out;
+        -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
     }
 }
 
@@ -48,10 +51,17 @@ body {
     font-size: 3rem;
     color: #000;
     margin-top: 50px;
+    margin-left: 3%;
 }
 
+.list:hover {    // при наведении на любую область списка
+    .list-item__button {
+        @extend%block-hover;
+    }
+}
 
 .list-item {
+    position: relative;
     margin-top: 20px;
     cursor: pointer;
     .list-item__button {
@@ -67,34 +77,28 @@ body {
         color: #000;
         cursor: pointer;
     }
+    .list-image {
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+    }
 }
 
-    .list:hover {                // при наведении на любую область списка
-        .list-item__button {
-            @extend%block-hover;
-        }
-    }
+.list-item__button:focus {   // при наведении только на кнопку
+    border-bottom: none;
+    color: rgb(48, 48, 250);
+}
 
-    .list-item__button:hover {   // при наведении только на ссылку-кнопку
-        border-bottom: none;
-        @extend%block-hover;
+.list:hover {
+    .list-item__button {
         &:active {
-            transform:rotate(-225deg);
+            .list-item__button::after {       // при клике на кнопку
+                -webkit-transform: rotate(-225deg);
+                        transform: rotate(-225deg);
+            }
         }
     }
-
-.list-image {
-    position: relative;
-   /*   height: 0;
-    overflow: hidden; */
 }
-
-.list-image .active {
-    max-height: 100%;
-    transition:max-height 1s;
-    overflow: visible;
-}
-
 
 .list-image__image {
     display: block;
@@ -102,7 +106,6 @@ body {
     margin: 15px auto;
     border-radius: 15px;
 }
-
 
 .list-image__text {
     @extend%text;
