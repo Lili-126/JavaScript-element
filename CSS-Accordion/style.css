@@ -15,6 +15,23 @@ li {
   font-weight: 700;
 }
 
+.list:hover .list-item__button {
+  color: rgb(48, 48, 250);
+}
+.list:hover .list-item__button::after {
+  content: "+";
+  display: block;
+  /* position: absolute;
+  z-index: 1; */
+  margin: 1.5% 5% 0 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.5rem;
+  color: rgb(48, 48, 250);
+  float: right;
+  transition: all 0.2s ease;
+}
+
 body {
   width: 100vw;
   background-color: #fffeef;
@@ -33,18 +50,18 @@ body {
   font-size: 3rem;
   color: #000;
   margin-top: 50px;
+  margin-left: 3%;
 }
 
 .list-item {
+  position: relative;
   margin-top: 20px;
   cursor: pointer;
 }
 .list-item .list-item__button {
-  display: block;
   width: 100%;
   height: 70px;
   padding-top: 10px;
-  text-decoration: none;
   border-left: none;
   border-right: none;
   border-top: 3px solid #ecedee;
@@ -53,10 +70,19 @@ body {
   color: #000;
   cursor: pointer;
 }
-
-.list-image {
+.list-item .list-image {
   position: relative;
-  /*  @extend%img-hidden; */
+  max-height: 0;
+  overflow: hidden;
+}
+
+.list-item__button:focus {
+  border-bottom: none;
+  color: rgb(48, 48, 250);
+}
+
+.list:hover .list-item__button:active .list-item__button::after {
+  transform: rotate(-225deg);
 }
 
 .list-image__image {
