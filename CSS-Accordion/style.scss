@@ -26,8 +26,8 @@ li {
         line-height: 0.5rem;
         color: rgb(48, 48, 250);
         float:right;
-        -webkit-transition: all 0.2s ease;
-                transition: all 0.2s ease;
+        -webkit-transition: all 0.4s ease;
+                transition: all 0.4s ease;
     }
 }
 
@@ -56,7 +56,7 @@ body {
     .list-item__button {
         @extend%block-hover;
         &:focus {
-            &::after {                        // при клике на кнопку (когда кнопка активная)
+            &::after {                         // при клике на кнопку (когда кнопка активная)
                 -webkit-transform: rotate(-225deg);
                         transform: rotate(-225deg);
             }
