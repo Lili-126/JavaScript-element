@@ -4,17 +4,26 @@ const listImg = document.querySelectorAll('.list-image');
 
 
 function togglerActiveClasses() {
+
     for (let i = 0; i < listItem.length; i++) {
-        if (listItem[i]) {
-            listItem[i].addEventListener('click', () => {
-                listItem[i].classList.toggle('active');
-                if (listItem[i].classList.contains('active')) {
-                    buttons[i].classList.add('active');
-                    listImg[i].style.maxHeight = listImg[i].scrollHeight + 'px';
-                    listImg[i].style.transition = 'max-height 0.6s';
-                } else listImg[i].style.maxHeight = 0;
-            });
-        }
+
+        listItem[i].addEventListener('click', () => {
+
+            if (!listItem[i].classList.contains('active')) {
+                listItem[i].classList.add('active');
+                buttons[i].classList.add('active');
+                listImg[i].style.maxHeight = listImg[i].scrollHeight + 'px';
+                listImg[i].style.transition = 'max-height 0.6s';
+
+            } else if (listItem[i].classList.contains('active')) {
+                listItem[i].classList.remove('active');
+                listImg[i].style.maxHeight = 0;
+            }
+       });
     };
 };
 togglerActiveClasses();
+
+
+
+
