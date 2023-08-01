@@ -20,14 +20,16 @@ function togglerActiveClasses() {
             });
         }
     };
-    clearActiveClasses();
 };
 togglerActiveClasses();
 
 function clearActiveClasses() {
     for (let i = 0; i < listItem.length; i++) {
         if (listItem[i].classList.contains('active')) {
-            listItem[i].classList.remove('active');
+            listItem[i].addEventListener('click', () => {
+                listItem[i].classList.remove('active');
+            });
         };
     }
 };
+clearActiveClasses();
