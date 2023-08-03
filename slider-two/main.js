@@ -16,7 +16,7 @@ upButton.addEventListener('click', () => {
 });
 
 downButton.addEventListener('click', () => {
-    activeSlideIndex--;
+    activeSlideIndex--
         if (activeSlideIndex < 0) {
             activeSlideIndex = image.length - 1;
         }

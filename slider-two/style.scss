@@ -23,8 +23,8 @@ body {
 .container {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    .buttons {
+    height: 100%;
+    .btn-switch {
         .up-button,
         .down-button {
             position: absolute;
@@ -87,11 +87,11 @@ body {
     background-image: $bgbrown;
 }
 
-.grei {
+.grey {
     background-image: $bggrei;
 }
 
-.images {
+.wrapper-images {
     height: $height;
     position: absolute;
     top: 0;
