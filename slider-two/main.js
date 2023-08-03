@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 const boxColors = document.querySelector('.colors');
-const boxImages = document.querySelector('.images');
+const boxImages = document.querySelector('.wrapper-images');
 const image = boxImages.querySelectorAll('.slides__image');
 const upButton = document.querySelector('.up-button');
 const downButton = document.querySelector('.down-button');
@@ -17,8 +17,8 @@ upButton.addEventListener('click', () => {
 
 downButton.addEventListener('click', () => {
     activeSlideIndex--;
-        if (activeSlideIndex <= 0) {
-            activeSlideIndex = image.length -1;
+        if (activeSlideIndex < 0) {
+            activeSlideIndex = image.length - 1;
         }
         rollSlider();
 });
